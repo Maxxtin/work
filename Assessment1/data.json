@@ -1,28 +1,36 @@
 {
   "market": [
     {
+      "img":"Assets/icon/Bitcoin.png",
       "symbol": "BTC",
       "name": "Bitcoin",
       "price_jpy": 721882,
-      "change_percent": -5.66
+      "change_percent": -4.66,
+      "location": "Assets/Shade.png"
     },
     {
+      "img":"Assets/icon/ETH.png",
       "symbol": "ETH",
       "name": "Ethereum",
       "price_jpy": 22370,
-      "change_percent": 40.45
+      "change_percent": 40.45,
+      "location":"Assets/Shade-1.png"
     },
     {
+      "img":"Assets/icon/XME.png",
       "symbol": "XEM",
       "name": "NEM",
       "price_jpy": 10.604,
-      "change_percent": -1.07
+      "change_percent": -1.07,
+      "location":"Assets/Shade-2.png"
     },
     {
+      "img":"Assets/icon/XRP.png",
       "symbol": "XRP",
       "name": "Ripple",
       "price_jpy": 50.839,
-      "change_percent": 10.66
+      "change_percent": 10.66,
+      "location":"Assets/Shade-3.png"
     }
   ],
   "btc_details": {

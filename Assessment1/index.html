@@ -1,275 +1,375 @@
+HTML
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dashboard</title>
+    <title>
+      Crypto Dashboard | Live Crypto Prices, Charts & Portfolio Tracker
+    </title>
 
+    <!-- Meta Description -->
+    <meta
+      name="description"
+      content="Monitor real-time crypto prices, track your portfolio, and stay ahead with market trends using our intuitive crypto dashboard."
+    />
+
+    <!-- Keywords -->
+    <meta
+      name="keywords"
+      content="crypto dashboard, cryptocurrency tracker, bitcoin price, ethereum, portfolio tracker, real-time crypto, live crypto prices, blockchain data"
+    />
+
+    <!-- Author -->
+    <meta name="author" content="Shyam from LoanDNA" />
     <!-- font links oxygen -->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap" rel="stylesheet">
-
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
 
     <link rel="stylesheet" href="style.css" />
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
-</head>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  </head>
   <body>
     <!-- Sidebar -->
-    <aside id="sidebar" class="sidebar">
-      <button id="closeSidebar" class="close-btn">&times;</button>
-      <nav>
-        <img src="Assets/logo.png" id="logo-img" alt="logo" />
+    <div class="layout">
+      <aside id="sidebar" class="sidebar">
+        <button id="closeSidebar" class="close-btn">&times;</button>
+        <nav>
+          <img src="Assets/logo.png" id="logo-img" alt="logo" />
 
-        <h1 class="sidebar-title">Quick Access</h1>
-        <ul>
-          <li class="active-menu"><a href="#"><span><img src="Assets/Dashboard.png"></span>Dashboard</a></li>
-          <li><a href="#"><span><img src="Assets/Exchange.png"></span>Exchange</a></li>
-          <li><a href="#"><span><img src="Assets/wallet.png"></span>My Wallet
-            <span><img style="float: right;" src="Assets/Right.png"></span></a></li>
-          <li><a href="#"><span><img src="Assets/tradeview.png"></span>TradeView</a></li>
-        </ul>
-        <h1 class="sidebar-title">Service</h1>
-       <div class="dropdown"><span><img src="Assets/Transaction.png"></span>Transactions
-      <span><img style="float: right;" src="Assets/Down.png"></span>
-      </div>
-        <ul class="dropdown-menu">
-          <li><a href="#">Buy & Sell Coin</a></li>
-          <li><a href="#">Exchange</a></li>
-          <li><a href="#">My Wallet</a></li>
-          <li><a href="#">TradeView</a></li>
-          <li><a href="#">Transactions</a></li>
-        </ul>
-        <ul>
-          <li><a href="#"><span><img src="Assets/Reward.png"></span>Rewards
-                      <span><img style="float: right;" src="Assets/Right.png"></span>
-                    </a></li>
-          <li><a href="#"><span><img src="Assets/utility.png"></span>utility plan
-                      <span><img style="float: right;" src="Assets/Right.png"></span>
-                    </a></li>
-        </ul>
-        <h1 class="sidebar-title">Account</h1>
-        <ul>
-          <li><a href="#"><span><img src="Assets/notification.png"></span>Notifications</a></li>
-          <li><a href="#"><span><img src="Assets/Setting.png"></span>Settings</a></li>
-          <li><a href="#"><span><img src="Assets/Faq.png"></span>FAQ</a></li>
-        </ul>
-
-        <div>
+          <h1 class="sidebar-title">Quick Access</h1>
           <ul>
-            <li class="sidebar-title log-out">
-              <a href="#"><span><img src="Assets/Power-Off.png"></span>Log out</a></li>
+            <li class="active-menu">
+              <a href="#"
+                ><span><img src="Assets/Dashboard.png" /></span>Dashboard</a
+              >
+            </li>
+            <li>
+              <a href="#"
+                ><span><img src="Assets/Exchange.png" /></span>Exchange</a
+              >
+            </li>
+            <li>
+              <a href="#"
+                ><span><img src="Assets/wallet.png" /></span>My Wallet
+                <span><img style="float: right" src="Assets/Right.png" /></span
+              ></a>
+            </li>
+            <li>
+              <a href="#"
+                ><span><img src="Assets/tradeview.png" /></span>TradeView</a
+              >
+            </li>
           </ul>
-        </div>
-      </nav>
-    </aside>
+          <h1 class="sidebar-title">Service</h1>
+          <div class="dropdown">
+            <span><img src="Assets/Transaction.png" /></span>Transactions
+            <span
+              ><img style="float: right" src="Assets/arrow-Down.png" />
+              <img style="float: right" src="Assets/Label.png"
+            /></span>
+          </div>
+          <ul class="dropdown-menu">
+            <li><a href="#">Buy & Sell Coin</a></li>
+            <li><a href="#">Deposit Yen</a></li>
+            <li><a href="#">Withdraw Yen</a></li>
+            <li><a href="#">Send Coin</a></li>
+            <li><a href="#">Receive Coin</a></li>
+            <li><a href="#">Deposite Coin</a></li>
+          </ul>
+          <ul>
+            <li>
+              <a href="#"
+                ><span><img src="Assets/Reward.png" /></span>Rewards
+                <span><img style="float: right" src="Assets/Right.png" /></span>
+              </a>
+            </li>
+            <li>
+              <a href="#"
+                ><span><img src="Assets/utility.png" /></span>utility plan
+                <span><img style="float: right" src="Assets/Right.png" /></span>
+              </a>
+            </li>
+          </ul>
+          <h1 class="sidebar-title">Account</h1>
+          <ul>
+            <li>
+              <a href="#"
+                ><span><img src="Assets/notification.png" /></span
+                >Notifications</a
+              >
+            </li>
+            <li>
+              <a href="#"
+                ><span><img src="Assets/Setting.png" /></span>Settings</a
+              >
+            </li>
+            <li>
+              <a href="#"
+                ><span><img src="Assets/Faq.png" /></span>FAQ</a
+              >
+            </li>
+          </ul>
 
-    <!-- Optional Overlay -->
-    <div id="overlay" class="overlay"></div>
+          <div>
+            <ul>
+              <li class="sidebar-title log-out">
+                <a href="#"
+                  ><span><img src="Assets/Power-Off.png" /></span>Log out</a
+                >
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </aside>
 
-    <section class="main">
-<header class="logo-con">
-      <!-- Sidebar Toggle Button -->
-      <div class="logo">
-        <button id="sidebarToggle" class="hamburger">&#9776;</button>
-        <img src="Assets/logo.png" id="logo-img" alt="logo" />
-        <img src="Assets/Search.png" id="search-icon" alt="Search-icon" />
-      </div>
-    </header>
+      <section class="main">
+        <header>
+          <!-- mobile view -->
+          <div class="logo-con">
+            <!-- Sidebar Toggle Button -->
 
-    <section class="content">
-      <h1>
-        <span><img src=""></span>Welcome
-        <span><img src=""></span>Dashboard
-      </h1>
-      <span>
-        <img src="Assets/left.png" alt="list-icon" />
-        <img src="Assets/pagenation.png" alt="page-icon" />
-      </span>
-    </section>
-
- 
-    <section>
-      <div class="market-cards slider-container">
-        <div class="card-slider">
-          <div class="card">
-            <div>
-            <div class="card-title">
-              BTC (Bitcoin)
-              <span>¥ 721,882 <span style="color: red">▼ 4.66%</span></span>
-            </div>
-            <div class="chart-placeholder">
-              <img src="Assets/Shade.png" alt="btc-chart" />
-            </div>
+            <div class="logo">
+              <button id="sidebarToggle" class="hamburger">&#9776;</button>
+              <img src="Assets/logo.png" id="logo-img" alt="logo" />
+              <img src="Assets/Search.png" id="search-icon" alt="Search-icon" />
             </div>
           </div>
-          <div class="card">
+          <!-- desktop view -->
+          <!-- <div class="desktop-nav">
+
             <div>
-            <div class="card-title">
-              ETH (Ethereum)
-              <span>¥ 22,370 <span style="color: green">▲ 40.45%</span></span>
+              <span><img src="Assets/burger.png" /></span>
+              <span><img src="Assets/nav/Wallet.png" alt="" /></span>
+              <span><img src="Assets/nav/Seach.png" alt="" /></span>
             </div>
-            <div class="chart-placeholder">
-              <img src="Assets/Shade-1.png" alt="btc-chart" />
+            <div>
+              <span
+                ><img
+                  src="Assets/nav/Profile.png"
+                  height="30px"
+                  width="30px"
+                  alt=""
+              /></span>
+              <span><img src="Assets/nav/Setting.png" alt="" /></span>
+              <span><img src="Assets/nav/Bell.png" alt="" /></span>
+              <span><img src="Assets/nav/Number.png" alt="" /></span>
+              <span><img src="Assets/nav/US.png" alt="" /></span>
             </div>
+          </div> -->
+       <div class="head">
+
+                <div class="head-left">
+                    <button id="menu-btn">
+                        <img src="./Assets/burger.png" alt="">
+                    </button>
+                    <img src="./Assets/nav/Wallet.png" alt="">
+                    <div class="search-bar">
+                        <img src="./assets/nav/Seach.png" alt="">
+                        <input type="text" placeholder="Type of cryptocurrency...">
+                    </div>
+                </div>
+
+                <div class="head-right">
+
+                    <img src="./Assets/nav/Profile.png" alt="">
+                    <img src="./Assets/nav/Setting.png" alt="">
+                    <div class="shape">
+                        <div class="circle"><img src="Assets/nav/Number.png" alt=""></div><img src="./Assets/nav/Bell.png" alt="">
+                    </div>
+                    <img src="./Assets/nav/US.png" alt="">
+                </div>
+              </div>
+
+        </header>
+
+        <section class="content">
+          <p>
+            <span class="path"><img src="Assets/Path 2.png" /></span>Welcome
+            <span class="path"><img src="Assets/Path 2.png" /></span>
+            <span class="path">Dashboard<img src="Assets/path-cl.png" /></span>
+          </p> 
+          <span>
+            <img src="Assets/left.png" alt="list-icon" />
+            <img src="Assets/pagenation.png" alt="page-icon" />
+          </span>
+        </section>
+
+        <!-- <section class="card-container">
+          <div class="market-cards slider-container">
+            <div class="card-slider"></div>
+          </div>
+        </section> -->
+
+        <section class="main-chart">
+          <div class="section btc-info">
+            <h2>
+              BTC Details
+              <span class="price-info">¥ 721,882</span>
+            </h2>
+            <div class="btc-chart">
+              <img src="Assets/bit-chart.png" alt="btc-chart" />
             </div>
           </div>
-          <div class="card">
-            <div>
-            <div class="card-title">
-              XEM (NEM)
-              <span>¥ 10.604 <span style="color: red">▼ 1.07%</span></span>
-            </div>
-            <div class="chart-placeholder">
-              <img src="Assets/Shade-2.png" alt="btc-chart" />
-            </div>
+
+          <div class="section market-cap">
+            <h3 class="table-title">
+              <span class="path"> <img src="Assets/Path 2.png" /></span>Market
+              Cap
+            </h3>
+            <div class="marketcap-table-wrapper">
+              <table class="marketcap-table">
+                <thead>
+                  <tr>
+                    <th>Coin</th>
+                    <th>Price (JPY)</th>
+                    <th>Change</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>BTC</td>
+                    <td>¥ 721,882</td>
+                    <td style="color: red">▼ 4.66%</td>
+                  </tr>
+                  <tr>
+                    <td>BCH</td>
+                    <td>¥ 49,476</td>
+                    <td style="color: green">▲ 0.39%</td>
+                  </tr>
+                  <tr>
+                    <td>ETH</td>
+                    <td>¥ 22,370</td>
+                    <td style="color: green">▲ 40.45%</td>
+                  </tr>
+                  <tr>
+                    <td>LTC</td>
+                    <td>¥ 5,788</td>
+                    <td style="color: red">▼ 0.29%</td>
+                  </tr>
+                  <tr>
+                    <td>ETC</td>
+                    <td>¥ 1,660</td>
+                    <td style="color: green">▲ 0.72%</td>
+                  </tr>
+                  <tr>
+                    <td>XRP</td>
+                    <td>¥ 50.839</td>
+                    <td style="color: green">▲ 10.66%</td>
+                  </tr>
+                  <tr>
+                    <td>FCT</td>
+                    <td>¥ 534.68</td>
+                    <td style="color: green">▲ 4.74%</td>
+                  </tr>
+                  <tr>
+                    <td>LSK</td>
+                    <td>¥ 321.4</td>
+                    <td style="color: red">▼ 0.64%</td>
+                  </tr>
+                  <tr>
+                    <td>XEM</td>
+                    <td>¥ 10.604</td>
+                    <td style="color: red">▼ 1.07%</td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
           </div>
-          <div class="card">
-            <div>
-            <div class="card-title">
-              XRP (Ripple)
-              <span>¥ 50.839 <span style="color: green">▲ 10.66%</span></span>
-            </div>
-            <div class="chart-placeholder">
-              <img src="Assets/shade-3.png" alt="btc-chart" />
+        </section>
+
+        <section class="activity-news">
+          <div class="section activities">
+            <h3 class="table-title">
+              <span class="path"><img src="Assets/Path 2.png" /> </span>Latest
+              Activities
+            </h3>
+            <div class="activity-table-wrapper">
+              <table class="activity-table">
+                <thead>
+                  <tr>
+                    <th>Date</th>
+                    <th>Detail</th>
+                    <th>Price</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>2018/10/02</td>
+                    <td>Deposit Japanese Yen</td>
+                    <td style="color: green">+¥10,000</td>
+                  </tr>
+                  <tr>
+                    <td>2018/10/02</td>
+                    <td>Bought Bitcoin</td>
+                    <td style="color: green">+0.0001847 BTC</td>
+                  </tr>
+                  <tr>
+                    <td>2018/10/02</td>
+                    <td>Service Fee</td>
+                    <td style="color: red">−¥500</td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
           </div>
-        </div>
-        </div>
-      </div>
 
-   <section class="main-chart">
-       <div class="section btc-info">
-        <h2>
-          BTC Details
-          <span class="price-info">¥ 721,882</span>
-        </h2>
-        <div class="btc-chart">
-          <img src="Assets/bit-chart.png" alt="btc-chart" />
-        </div>
-      </div>
+          <section class="news-section">
+            <div class="newsfeed-container">
+              <div class="newsfeed-header">
+                <span class="path"> <img src="Assets/Path 2.png" /></span>Crypto
+                Newsfeed
+              </div>
+              <button class="subscribe-btn">Subscribe</button>
 
-      <div class="section market-cap">
-        <h3>Market Cap</h3>
-        <div class="marketcap-table-wrapper">
-          <table class="marketcap-table">
-            <thead>
-              <tr>
-                <th>Coin</th>
-                <th>Price (JPY)</th>
-                <th>Change</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>BTC</td>
-                <td>¥ 721,882</td>
-                <td style="color: red">▼ 4.66%</td>
-              </tr>
-              <tr>
-                <td>BCH</td>
-                <td>¥ 49,476</td>
-                <td style="color: green">▲ 0.39%</td>
-              </tr>
-              <tr>
-                <td>ETH</td>
-                <td>¥ 22,370</td>
-                <td style="color: green">▲ 40.45%</td>
-              </tr>
-              <tr>
-                <td>LTC</td>
-                <td>¥ 5,788</td>
-                <td style="color: red">▼ 0.29%</td>
-              </tr>
-              <tr>
-                <td>ETC</td>
-                <td>¥ 1,660</td>
-                <td style="color: green">▲ 0.72%</td>
-              </tr>
-              <tr>
-                <td>XRP</td>
-                <td>¥ 50.839</td>
-                <td style="color: green">▲ 10.66%</td>
-              </tr>
-              <tr>
-                <td>FCT</td>
-                <td>¥ 534.68</td>
-                <td style="color: green">▲ 4.74%</td>
-              </tr>
-              <tr>
-                <td>LSK</td>
-                <td>¥ 321.4</td>
-                <td style="color: red">▼ 0.64%</td>
-              </tr>
-              <tr>
-                <td>XEM</td>
-                <td>¥ 10.604</td>
-                <td style="color: red">▼ 1.07%</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-   </section>
-    </section>
+              <!-- News Item 1 -->
+              <div class="news-item">
+                <div class="news-content">
+                  <div class="news-time">Today &nbsp;&nbsp;11:36</div>
+                  <div class="news-title">
+                    Beyond Bad Trades: Cybersecurity Risks to Cryptocurrency
+                    Exchange Users
+                  </div>
+                  <div class="news-description">
+                    Cryptocurrency-mining malware is not the only type of
+                    cryptocurrency-related threat — cybercriminals have
+                    resorted...
+                  </div>
+                </div>
+                <div class="news-icon">
+                  <img src="Assets/news1.png" alt="" />
+                </div>
+              </div>
 
- <section class="activity-news">
-    <div class="section activities">
-      <h3><span><img src=""></span>Latest Activities</h3>
-      <div class="activity-table-wrapper">
-        <table class="activity-table">
-          <thead>
-            <tr>
-              <th>Date</th>
-              <th>Detail</th>
-              <th>Price</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>2018/10/02</td>
-              <td>Deposit Japanese Yen</td>
-              <td style="color: green">+¥10,000</td>
-            </tr>
-            <tr>
-              <td>2018/10/02</td>
-              <td>Bought Bitcoin</td>
-              <td style="color: green">+0.0001847 BTC</td>
-            </tr>
-            <tr>
-              <td>2018/10/02</td>
-              <td>Service Fee</td>
-              <td style="color: red">−¥500</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
+              <!-- News Item 2 -->
+              <div class="news-item">
+                <div class="news-content">
+                  <div class="news-time">Yesterday</div>
+                  <div class="news-title">
+                    Ripple News Today: Ripple is planning to upgrade the
+                    technology of the cryptocurrency
+                  </div>
+                  <div class="news-description">
+                    Ripple's upcoming upgrade could boost scalability and
+                    adoption across the crypto industry...
+                  </div>
+                </div>
+                <div class="news-icon">
+                  <img src="Assets/news1.png" alt="" />
+                </div>
+              </div>
+            </div>
+          </section>
+        </section>
+      </section>
     </div>
-    </div>
 
-    <section class="news-section">
-        <div class="newsfeed">
-            <h3><span><img src=""></span>Crypto Newsfeed</h3>
-                <div class="news-item">
-                    <h4>Bitcoin Hits New All-Time High</h4>
-                    <p>Bitcoin has reached a new all-time high, surpassing ¥1,000,000 for the first time.</p>
-                </div>
-                <div class="news-item">
-                    <h4>Ethereum 2.0 Launch Date Announced</h4>
-                    <p>The Ethereum Foundation has announced the launch date for Ethereum 2.0.</p>
-                </div>
-                <div class="news-item">
-                    <h4>Ripple Partners with Major Bank</h4>
-                    <p>Ripple has partnered with a major bank to enhance cross-border payments.</p>
-                </div>
-        </div>
-
-    </section>
-
-    </section>
-    </section>
     <script src="script.js"></script>
   </body>
 </html>

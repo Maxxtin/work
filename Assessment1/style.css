@@ -1,4 +1,6 @@
-css * {
+CSS
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -9,13 +11,19 @@ css * {
 
 body {
     overflow-x: hidden;
-    background-color: #fdfff5;
+    background-color: #f3f6fe;
+}
+
+.main{
+  width: 100%;
+}
+.desktop-nav,.head{
+display: none;
 }
 
 .logo-con {
     width: 100%;
     background-color: #1f263e;
-    padding: 0.5rem;
 }
 
 .logo {
@@ -26,6 +34,7 @@ body {
 }
 
 .logo img {
+  width:150px;
     max-width: 13rem;
     height: auto;
 }
@@ -44,7 +53,7 @@ body {
     height: 100%;
     background-color: #1F263E;
     color: white;
-    padding: 2rem 1rem;
+    padding: 2rem 0rem;
     box-shadow: 2px 0 10px rgba(0, 0, 0, 0.3);
     transition: left 0.3s ease;
     z-index: 1001;
@@ -59,6 +68,8 @@ body {
 .active-menu {
     background-color: #303750;
     width: 100%;
+    height: 40px;
+    padding: 8px 0px
 }
 
 .sidebar nav ul {
@@ -116,24 +127,16 @@ body {
     cursor: pointer;
 }
 
-/* Overlay */
-.overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.4);
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.3s ease;
-    z-index: 1000;
-}
-
-.overlay.active {
+.active {
     opacity: 1;
     visibility: visible;
 }
+
+.hidden{
+  opacity: 0;
+  visibility: hidden;
+}
+
 
 /* Sidebar active state */
 .sidebar.active {
@@ -149,7 +152,7 @@ body {
   box-shadow: inset 0 0 5px grey; 
   border-radius: 10px;
 }
- 
+
 /* Handle */
 ::-webkit-scrollbar-thumb {
   background: #423f6c; 
@@ -161,6 +164,10 @@ body {
   background: #0b0d24; 
 }
 
+.path{
+  margin:3px;
+  color: #1348FC;
+}
 .content {
     display: flex;
     justify-content: space-between;
@@ -176,6 +183,9 @@ body {
     -webkit-overflow-scrolling: touch;
     padding: 1rem;
 }
+.card-container ::-webkit-scrollbar{
+  display: none;
+} 
 
 .card-slider {
     display: flex;
@@ -191,7 +201,6 @@ body {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
     scroll-snap-align: start;
 }
-
 
 .market-cards {
     display: flex;
@@ -227,7 +236,6 @@ body {
 .chart-placeholder img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
 }
 
 .section {
@@ -253,15 +261,26 @@ body {
 
 .btc-chart {
     height: 15rem;
-    width: 25rem;
+    max-width: 400px;
     overflow: hidden;
     background: #ffffff;
     border-radius: 6px;
 }
 
+.table-title{
+  font-weight: bold;
+    font-size: 1.4em;
+    margin: 15px;
+}
+
 .market-cap,
 .activities {
+  max-width:500px;
+      background-color: #fff;
+      border: 1px solid #ddd;
+      border-radius: 12px;
     margin: 1.5rem;
+
 }
 
 .marketcap-table-wrapper {
@@ -326,17 +345,88 @@ body {
     border-bottom: none;
 }
 
+.newsfeed-container {
+      min-width: 300px;
+      max-width: 600px;
+      margin: 0 auto;
+      background-color: #fff;
+      border: 1px solid #ddd;
+      border-radius: 12px;
+      padding: 20px;
+      position: relative;
+    }
+
+    .newsfeed-header {
+      font-weight: bold;
+      font-size: 1.4em;
+      margin-bottom: 20px;
+    }
+
+    .subscribe-btn {
+      position: absolute;
+      color:rgb(0 0 0 / 56%);
+      top: 20px;
+      right: 20px;
+      background: transparent;
+      border: 1px solid #ddd;
+      padding: 6px 14px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 0.9em;
+    }
+
+    .news-item {
+        position: relative;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      background: #f9f9f9;
+      border-radius: 12px;
+      padding: 16px;
+      margin-bottom: 16px;
+      gap: 15px;
+    }
+
+    .news-content {
+      flex: 1;
+    }
+
+    .news-time {
+      font-size: 0.8em;
+      color: #888;
+      margin-bottom: 6px;
+    }
+
+    .news-title {
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+
+    .news-description {
+      font-size: 0.9em;
+      color: #777;
+    }
+
+    .news-icon {
+      position: absolute;
+      bottom: 0;
+      right:0 ;
+    }
+
+    .news-icon svg {
+      width: 28px;
+      height: 28px;
+      margin-bottom: 6px;
+    }
+
+
 
 /*  */
 
 /* Media Queries */
-@media (max-width: 768px) {
+@media (min-width: 1768px) {
     .logo img {
         max-width: 8rem;
-    }
-
-    .content {
-        flex-direction: column;
     }
 
     .section {
@@ -353,37 +443,114 @@ body {
 }
 
 @media (min-width: 1024px) {
-    .logo{
-        visibility: hidden;
+    .layout{
+        height: 100%;
     }
-    .logo-con{
-        background-color: #fff;
-    }
-    .main {
-        margin-left: 250px;
+   .main {
+        margin-left: 210px;
     }
 
+
+    .logo-con{
+        background-color: #fff;
+        padding: 10px;
+        display: none;
+    }
+
+
+.head {
+    left: 217px;
+    width: calc(100% - 217px);
+    height: 60px;
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 20px;
+    align-items: center;
+    background-color: var(--milk);
+    z-index: 100;
+}
+
+.head-left {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+#menu-btn {
+    background-color: transparent;
+    border: none;
+}
+
+.search-bar {
+    border: none;
+    border-radius: 10px;
+    padding: 3px 6px;
+    display: flex;
+    align-items: center;
+    background-color: var(--grey);
+    gap: 10px;
+}
+
+.search-bar input {
+    display: none;
+    border: none;
+    background: transparent;
+}
+
+.head-right {
+    display: flex;
+    align-items: center;
+}
+
+#menu-btn1 {
+    display: none;
+    background-color: transparent;
+    border: none;
+}
+
+.head-right img {
+    margin-right: 20px;
+}
+
+.shape {
+    position: relative;
+}
+
+.circle {
+    position: absolute;
+    top: -5px;
+    right: 10px;
+    width: 15px;
+    height: 15px;
+    font-size: 12px;
+    text-align: center;
+    border: 1px solid var(--cherry);
+    border-radius: 50%;
+    background-color: var(--cherry);
+}
+
+
     .sidebar {
+
         left: 0;
     }
 
     #sidebarToggle,
-    #closeSidebar,
-    #overlay {
+    #closeSidebar {
         display: none;
     }
 
-    .card-slider {
-        justify-content: space-between;
+
+    .card-container{
+        overflow-x: auto;
     }
 
-    .card {
-        flex: 1 1 calc(25% - 1rem);
-        min-width: 240px;
-    }
-.btc-chart{
-    width:55vw;
+.market-cap, .activities {
+    margin: 0.5rem;
 }
+
 .main-chart {
     display: flex;
     flex-wrap: wrap;
